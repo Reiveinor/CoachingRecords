@@ -16,6 +16,9 @@ public:
     ModelMain(QWidget *parent = nullptr);
     ~ModelMain();
 
+private slots:
+    void on_Visits_pushButton_clicked();
+
 private:
     Ui::ModelMain *ui;
 

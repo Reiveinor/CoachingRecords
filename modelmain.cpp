@@ -14,3 +14,9 @@ ModelMain::~ModelMain()
     delete ui;
 }
 
+
+void ModelMain::on_Visits_pushButton_clicked()
+{
+    visitsWindow_object.show();
+}
+
