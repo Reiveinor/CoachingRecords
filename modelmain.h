@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <visitswindow.h>
 
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class ModelMain; }
 QT_END_NAMESPACE
