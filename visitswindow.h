@@ -5,6 +5,7 @@
 #include <QSqlDatabase>
 #include <QDebug>
 #include <QSqlQuery> //интерфейс между QT и DB
+#include <QSqlTableModel>
 
 namespace Ui {
 class VisitsWindow;
@@ -23,6 +24,7 @@ private:
 
     QSqlDatabase DBvisits_object;
     QSqlQuery *queryVisits_object;
+    QSqlTableModel *visitsModel;
 };
 
 #endif // VISITSWINDOW_H

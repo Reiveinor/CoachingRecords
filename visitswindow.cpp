@@ -12,6 +12,11 @@ VisitsWindow::VisitsWindow(QWidget *parent) :
     {
         qDebug("База данных открыта");
         //дописать сообзение в статус баре
+        visitsModel = new QSqlTableModel(this, DBvisits_object);
+        visitsModel->setTable("Visits");
+        visitsModel->select();
+
+        ui -> visits_tableView->setModel(visitsModel);
     }
     else
     {
