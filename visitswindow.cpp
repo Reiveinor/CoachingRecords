@@ -1,6 +1,7 @@
 #include "visitswindow.h"
 #include "ui_visitswindow.h"
 
+
 VisitsWindow::VisitsWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::VisitsWindow)
@@ -30,3 +31,27 @@ VisitsWindow::~VisitsWindow()
 {
     delete ui;
 }
+
+void VisitsWindow::on_Add_Button_clicked()
+{
+    visitsModel->insertRow(visitsModel->rowCount());
+}
+
+
+void VisitsWindow::on_delete_Button_clicked()
+{
+    visitsModel ->removeRow(row);
+}
+
+
+void VisitsWindow::on_visits_tableView_clicked(const QModelIndex &index)
+{
+    row = index.row();
+}
+
+
+void VisitsWindow::on_update_Button_clicked()
+{
+    visitsModel->select();
+}
+
