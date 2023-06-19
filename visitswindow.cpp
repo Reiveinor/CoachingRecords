@@ -18,6 +18,9 @@ VisitsWindow::VisitsWindow(QWidget *parent) :
         visitsModel->select();
 
         ui -> visits_tableView->setModel(visitsModel);
+        //мод на отображение в таблице по размеру
+        ui -> visits_tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+
     }
     else
     {
@@ -52,6 +55,6 @@ void VisitsWindow::on_visits_tableView_clicked(const QModelIndex &index)
 
 void VisitsWindow::on_update_Button_clicked()
 {
-    visitsModel->select();
+    visitsModel->select(); //метод обновляет данные в таблице
 }
 
